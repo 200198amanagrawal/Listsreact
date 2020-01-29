@@ -2,15 +2,26 @@ import React,{Component} from "react";
 
 export default class App extends Component
 {
+    state={
+        user:[
+            {id:101,name:"Aman",pass:"abc"},
+            {id:102,name:"Shreya",pass:"123"},
+            {id:103,name:"Donnowhichgirl",pass:"lsd"}
+        ],
+        islogged:false
+    };
     render()
     {
-        const arr=[10,20,30,40];
-        const arr1=this.props.arrfromprops;
-        const newarr=arr.map((num)=>{
-        return <li>{num*2}</li>//here numarr is basically holding <li> so it will work acc.
+        const newmem=this.state.user.map((newuser)=>{
+            return <h3>
+            ID:{newuser.id} Name: {newuser.name} Password: {newuser.pass}
+            </h3>
         })
-        return (<>
-        <ul>{newarr}</ul>
-        </>)
+        
+        return (
+        <>
+            {newmem}
+        </>
+        )
     }
 }

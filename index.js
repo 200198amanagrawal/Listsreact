@@ -6,5 +6,4 @@ let el=<h1>Hello world!!</h1>/*changed babel as
 React.createElement("h1",null,"hello world");
 */
 //rendering an element:ReactDOM.render(el,document.getElementById("root"));
-const arr=[10,20,30,40];
-ReactDOM.render(<App arrfromprops={arr}/>,document.getElementById("root"));
+ReactDOM.render(<App/>,document.getElementById("root"));
